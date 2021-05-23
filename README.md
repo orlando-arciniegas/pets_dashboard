@@ -1,6 +1,6 @@
 # Get Started with the Dashboard
 
-In the project directory "webR4", you should follow the next steps:
+In the project directory, you should follow the next steps:
 
 ### `npm install`
 
