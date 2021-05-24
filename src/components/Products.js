@@ -10,7 +10,7 @@ class Products extends Component{
     constructor(){
         super()
         this.state ={
-       	countriesList : []
+       	productsList : []
         }
     }
     
@@ -22,7 +22,7 @@ class Products extends Component{
         console.log(result)
         this.setState({
             isLoaded: true,
-            countriesList: result.data
+            productsList: result.data
         });
         },
         (error) => {
@@ -53,9 +53,9 @@ class Products extends Component{
                                             <th>Fecha de ingreso</th>
 										</tr>
 									</thead>
-                                    {/*---- For each to iterates over items in state ----------*/}
-									{this.state.countriesList.map((country,index)=>{
-                               		return <ProductsList {...country} key={index} />
+                                    {/*---- .Map() to iterates over items in state ----------*/}
+									{this.state.productsList.map((product,index)=>{
+                               		return <ProductsList {...product} key={index} />
                             		})} 	
 								</table>
 							</div>
