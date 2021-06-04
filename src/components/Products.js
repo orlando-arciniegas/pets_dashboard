@@ -5,6 +5,16 @@ import React, {Component} from 'react';
 import ProductsList from './ProductsList';
 
 let url = "http://grupo-pets.herokuapp.com/api/products";
+
+let objectUrl = {
+    method: 'GET',
+    mode: 'no-cors',
+    headers: {
+        "Access-Control-Allow-Origin": "*",
+        'Content-Type': 'application/json'
+    }
+}
+
 /*---- Declared component ----------*/
 class Products extends Component{
 
@@ -17,7 +27,7 @@ class Products extends Component{
     
     /*---- To Receive data from the Api  & mount on the component ----------*/
     componentDidMount() {
-    fetch(url)
+    fetch(url, objectUrl)
     .then(res => res.json())
     .then(result => {
         console.log(result)

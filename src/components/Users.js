@@ -8,9 +8,11 @@ let url = "http://grupo-pets.herokuapp.com/api/users";
 let bearer = `Bearer + eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJub21icmUiOiJPcmxhbmRvIiwiZW1haWwiOiJvcmxhbmRvQGVtYWlsLmNvbSJ9LCJpYXQiOjE2MjE3ODMxMzJ9.BIyq2r9jL3Lh2O_WUrThyBW3ncnz564HxRHfK0Richs`;
 let objectUrl = {
     method: 'GET',
+    mode: 'no-cors',
     withCredentials: true,
     credentials: 'include',
     headers: {
+        "Access-Control-Allow-Origin": "*",
         'Authorization': bearer,
         'X-FP-API-KEY': 'secretkey',
         'Content-Type': 'application/json'
