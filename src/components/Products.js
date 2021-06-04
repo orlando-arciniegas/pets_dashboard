@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import ProductsList from './ProductsList';
 
-let url = "http://grupo-pets.herokuapp.com/api/products";
+let url = "https://grupo-pets.herokuapp.com/api/products";
 
 let objectUrl = {
     method: 'GET',
