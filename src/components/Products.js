@@ -4,6 +4,7 @@
 import React, {Component} from 'react';
 import ProductsList from './ProductsList';
 
+let url = "http://grupo-pets.herokuapp.com/api/products";
 /*---- Declared component ----------*/
 class Products extends Component{
 
@@ -16,7 +17,7 @@ class Products extends Component{
     
     /*---- To Receive data from the Api  & mount on the component ----------*/
     componentDidMount() {
-    fetch("api/products")
+    fetch(url)
     .then(res => res.json())
     .then(result => {
         console.log(result)
